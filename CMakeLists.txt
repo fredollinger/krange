@@ -21,7 +21,11 @@ add_definitions(${Qt5Widgets_DEFINITIONS})
 # without -fPIE. We add that here.
 set(CMAKE_CXX_FLAGS "${Qt5Widgets_EXECUTABLE_COMPILE_FLAGS}")
 
-add_executable(krange main.cpp)
+qt5_wrap_ui(UI_HEADERS krwindow.ui)
+
+add_executable(krange 
+krwindow.cpp
+main.cpp)
 
 # The Qt5Widgets_LIBRARIES variable also includes QtGui and QtCore
 target_link_libraries(krange ${Qt5Widgets_LIBRARIES})
