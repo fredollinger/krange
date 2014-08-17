@@ -24,6 +24,8 @@ set(CMAKE_CXX_FLAGS "${Qt5Widgets_EXECUTABLE_COMPILE_FLAGS}")
 qt5_wrap_ui(UI_HEADERS krwindow.ui)
 
 add_executable(krange 
+editorpage4.cpp
+tabwidget4.cpp
 krwindow.cpp
 main.cpp)
 

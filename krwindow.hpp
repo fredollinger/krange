@@ -6,12 +6,13 @@ class KRWindow;
 }
 
 class KRWindow : public QMainWindow {
-    Q_OBJECT
+Q_OBJECT
 
-   public:
-    explicit KRWindow(QWidget *parent = 0);
-    ~KRWindow();
+public:
+   explicit KRWindow(QWidget *parent = 0);
+   ~KRWindow();
 
-   private:
-    Ui::KRWindow *ui;
+private:
+   Ui::KRWindow *ui;
 };
+
