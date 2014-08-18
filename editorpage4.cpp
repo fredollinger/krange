@@ -12,10 +12,10 @@
 #include "editorpage4.h"
 
 namespace krange{
-EditorPage::EditorPage(QTextEdit* pDoc, QTabWidget* pParent, const char* szName)
-	: QHBoxLayout(pParent)
+EditorPage::EditorPage(QTabWidget* pParent, const char* szName)
+	: QGroupBox(pParent)
 	, m_pParentTab(pParent)
-	, m_pDoc(pDoc)
+	, m_pDoc()
 {
 }
 // END DEPRECATED

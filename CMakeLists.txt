@@ -25,9 +25,10 @@ qt5_wrap_ui(UI_HEADERS krwindow.ui)
 
 add_executable(krange 
 editorpage4.cpp
-tabwidget4.cpp
+main.cpp
+krresults.cpp
 krwindow.cpp
-main.cpp)
+tabwidget4.cpp)
 
 # The Qt5Widgets_LIBRARIES variable also includes QtGui and QtCore
 target_link_libraries(krange ${Qt5Widgets_LIBRARIES})

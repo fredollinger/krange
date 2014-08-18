@@ -1,10 +1,8 @@
 #ifndef TABWIDGET_H
 #define TABWIDGET_H
 
-//#include <qtoolbutton.h>
-//#include "kspopup.h"
-//#include <ktabwidget.h>
 #include <QtWidgets/QTabWidget>
+#include <editorpage4.h>
 
 /**
  * An extension to the standard KDE tab widget that allows the user to select
@@ -18,7 +16,7 @@ Q_OBJECT
 public:
     TabWidget();
     ~TabWidget();
-    //QWidget* page(int) const;
+    void addEditorPage(EditorPage*);
 
 #if 0
 private:

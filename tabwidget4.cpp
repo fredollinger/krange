@@ -15,30 +15,17 @@ namespace krange{
 TabWidget::TabWidget() 
     : QTabWidget()
 {
-#if 0
-	// Create a popup menu
-	//m_pMenu = new KSPopup(this);
-	
-	// Set the current tab based on the menu selection
-	//connect(m_pMenu, SIGNAL(activated(int)), this, SLOT(setCurrentPage(int)));
-	
-	// Create a button at the top-right corner of the tab widget
-	m_pButton = new QToolButton(this);
-	// m_pButton->setIconSet(Pixmaps().getPixmap(KScopePixmaps::TabList));
-	// QToolTip::add(m_pButton, i18n("Shows a list of all open tabs"));
-	m_pButton->adjustSize();
-	setCornerWidget(m_pButton, Qt::TopRightCorner);
-	
-	// Show the popup-menu when the button is clicked
-	connect(m_pButton, SIGNAL(clicked()), this, SLOT(slotShowTabList()));
-#endif
 }
 
-/**
- * Class destructor.
- */
 TabWidget::~TabWidget()
 {
 }
 
-} // namespace kscope4
+void TabWidget::addEditorPage(EditorPage *pNewPage) {
+    int index;
+    QString title="title";
+    index = addTab(pNewPage, title);
+    setCurrentIndex(index);
+}
+
+} // namespace krange
